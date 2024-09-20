@@ -27,16 +27,16 @@
       </div>
        <br>
       <div class="grid grid-cols-3 gap-3">
-        <button class="btn">Add Money</button>
-        <button class="btn">Cashout</button>
-        <button class="btn">Transferred Money</button>
-        <button class="btn">Get Bonus</button>
-        <button class="btn">Pay Bill</button>
-        <button class="btn">Transanction</button>
+        <button id="add-btn" class="btn">Add Money</button>
+        <button id="cashout-btn" class="btn">Cashout</button>
+        <button id="transfer-btn" class="btn">Transferred Money</button>
+        <button id="bonus-btn" class="btn">Get Bonus</button>
+        <button id="bill pay" class="btn">Pay Bill</button>
+        <button id="transaction-btn" class="btn">Transanction</button>
       </div>
        <br>
-        
-       <form class="card-body">
+        <!-- addmoney-form -->
+       <form id="add-form" class="hidden" class="card-body">
         <div class="form-control">
           <label class="label">
             <span class="label-text">Amount</span>
@@ -51,6 +51,24 @@
         </div>
         <div class="form-control mt-6">
           <button id="btn-addmoney" class="btn btn-primary">Add Money</button>
+        </div>
+      </form>
+      <!-- cashout form -->
+      <form id="cashout-form" class="hidden" class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Amount</span>
+          </label>
+          <input id="input-add-money" type="number" placeholder="Enter the amount" class="input input-bordered" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Pin</span>
+          </label>
+          <input id="input-pin" type="password" placeholder="Enter your 4 digit pin" class="input input-bordered" required />
+        </div>
+        <div class="form-control mt-6">
+          <button id="btn-addmoney" class="btn btn-primary">Cash Out</button>
         </div>
       </form>
       <script src="/Payoo/js/home.js"></script>

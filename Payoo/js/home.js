@@ -8,18 +8,25 @@ document.getElementById('btn-addmoney').addEventListener('click',function(event)
     const pinInput=document.getElementById('input-pin').value
 
     if(pinInput=='0000'){
-        console.log("money added")
+        const accountBalance=document.getElementById('balance').innerText
+    
+        const addMoney=parseInt(addMoneyInput)
+        const mainBalance=parseInt(accountBalance)
+
+        const newbalance=addMoney+mainBalance
+    
+    document.getElementById('balance').innerText=newbalance
     }
     else{
         alert("wrong pin!")
     }
+})
 
-    const accountBalance=document.getElementById('balance').innerText
-    
-    const addMoney=parseInt(addMoneyInput)
-    const mainBalance=parseInt(accountBalance)
+document.getElementById('add-btn').addEventListener('click',function(){
+    document.getElementById('add-form').setAttribute('class','block')
+})
 
-    const newbalance=addMoney+mainBalance
-    
-    document.getElementById('balance').innerText=newbalance
+document.getElementById('cashout-btn').addEventListener('click',function(){
+    document.getElementById('cashout-form').setAttribute('class','block')
+    document.getElementById('add-form').setAttribute('class','hidden')
 })

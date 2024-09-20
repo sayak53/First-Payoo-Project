@@ -7,5 +7,19 @@ document.getElementById('btn-addmoney').addEventListener('click',function(event)
     const addMoneyInput=document.getElementById('input-add-money').value
     const pinInput=document.getElementById('input-pin').value
 
-    console.log(addMoneyInput,pinInput)
+    if(pinInput=='0000'){
+        console.log("money added")
+    }
+    else{
+        alert("wrong pin!")
+    }
+
+    const accountBalance=document.getElementById('balance').innerText
+    
+    const addMoney=parseInt(addMoneyInput)
+    const mainBalance=parseInt(accountBalance)
+
+    const newbalance=addMoney+mainBalance
+    
+    document.getElementById('balance').innerText=newbalance
 })

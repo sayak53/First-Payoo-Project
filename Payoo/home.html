@@ -71,6 +71,25 @@
           <button id="btn-outmoney" class="btn btn-primary">Cash Out</button>
         </div>
       </form>
+      <!-- transfer form -->
+      <form id="transfer-form" class="hidden" class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Amount</span>
+          </label>
+          <input id="input-transfer-money" type="number" placeholder="Enter the amount" class="input input-bordered" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Pin</span>
+          </label>
+          <input id="input-transfer-pin" type="password" placeholder="Enter your 4 digit pin" class="input input-bordered" required />
+        </div>
+        <div class="form-control mt-6">
+          <button id="btn-transfermoney" class="btn btn-primary">Transfer</button>
+        </div>
+      </form>
+      <script src="/Payoo/js/utilities.js"></script>
       <script src="/Payoo/js/home.js"></script>
 </body>
 </html>
